@@ -25,17 +25,17 @@ function App() {
 		};
 
 		const handleResponse = (res) => {
-			/*
-        - iterates through transactions
-        - creates an object with customer name as the key, and an array of length 3 for the points earned for each of the 3 months
-        eg. 
-        {
-          customer: [Jan, Feb, Mar]
-          Eric:     [100,25,49],
-          Nick:     [100,25,49],
-          Steven:   [100,25,49],
-        }
-      */
+		/*
+        	- iterates through transactions
+        	- creates an object with customer name as the key, and an array of length 3 for the points earned for each of the 3 months
+        	eg. 
+        	{
+          		customer: [Jan, Feb, Mar]
+          		Eric:     [100,25,49],
+          		Nick:     [100,25,49],
+          		Steven:   [100,25,49],
+        	}
+      		*/
 			const obj = {};
 			for (const transaction of res) {
 				const month = getMonth(transaction.date);
